@@ -1,0 +1,29 @@
+JavascriptStudy
+
+컴파일언어(전체 페이지를 읽고, 실행) :  Cdjsdj, Java 등
+인터프리터언어(한 줄씩 읽어가며, 실행) :
+
+let arr = [[900, 123], [124, 567], [234, 236], [698, 865], [739, 269]];
+
+function solution(cal) {
+  let arr1 = [];
+  let arr2 = [];
+  let arr3 = [];
+  for(let i =0;i<cal.length;i++) {
+     if(cal[i][0] > cal[i][1]) {
+       arr1.push([cal[i][0], cal[i][1]])
+     } else {
+       arr1.push([cal[i][1], cal[i][0]])
+     }
+  }
+  console.log(arr1)
+  for(let i =0;i<arr1.length;i++) {
+    arr2.push(arr1[i][0])
+    arr3.push(arr1[i][1])
+  }
+  // console.log(arr2.sort((a,b) => b-a)[0] * arr3.sort((a,b) => b-a)[0])
+  // return arr2.sort((a,b) => b-a)[0] * arr3.sort((a,b) => b-a)[0]
+  console.log(Math.max(...arr2) * Math.max(...arr3))
+ }
+
+solution(arr)
